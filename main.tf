@@ -29,8 +29,10 @@ resource "aws_security_group" "fs" {
   }
 
   tags {
-    "Name"      = "${var.efs_name}-efs"
+    "Name"      = "${var.efs_name}-network-efs"
     "Env"       = "${var.env_name}"
+    "App"       = "network"
+    "Service"   = "efs"
     "ManagedBy" = "terraform"
   }
 
