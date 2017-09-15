@@ -29,7 +29,7 @@ resource "aws_security_group" "fs" {
   }
 
   tags {
-    "Name"      = "${var.efs_name}"
+    "Name"      = "${var.efs_name}-efs"
     "Env"       = "${var.env_name}"
     "ManagedBy" = "terraform"
   }
